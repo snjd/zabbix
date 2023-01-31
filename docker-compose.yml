@@ -17,7 +17,7 @@ services:
     - mysql-data:/var/lib/mysql
    restart: unless-stopped
 
-  zabbix-server-mysql-feb:
+  zabbix-server-mysql:
    image: zabbix/zabbix-server-mysql:centos-6.0.8
    environment:
     - DB_SERVER_HOST=mysql-server
@@ -32,7 +32,7 @@ services:
    restart: unless-stopped
 
 
-  zabbix-web-nginx-mysql-feb:
+  zabbix-web-nginx-mysql:
    image: zabbix/zabbix-web-nginx-mysql:centos-6.0.8
    environment: 
     - ZBX_SERVER_HOST=zabbix-server-mysql
